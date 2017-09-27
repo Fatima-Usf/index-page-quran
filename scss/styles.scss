@@ -1,0 +1,318 @@
+// Fonts
+$firstFont: "sans-serif";
+$logoFont: "Pacifico";
+$titelFont: "europa";
+//colors
+$maron:#1C130B;
+$black:#0B0702;
+$grant:#360102;
+$beige:#5F2F00;
+// Helpers
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+// il va center tout le contenu et faire du margin left et right
+.wrapper {
+	width: 1100px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+// Main Styles
+* {
+//klk soit le padding il va savoir qu'il va etre a l'interieur de la taille de mon div
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: $firstFont;
+
+}
+.button-highlight{
+	display: inline-block;
+	background-color: #EDDAAE;
+	color: black;
+	text-decoration: none;
+	padding: .8em 2em;
+	font-size:1.1 em;
+	border-radius: 4px;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		box-shadow: 0 0 0 2px rgba(182, 197, 205, .3), 0 1px 0 rgba(0, 0, 0, .035), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.05);
+	}
+}
+
+.c1{
+	background: $black;
+	background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba($black, 1)), url(ayahe3.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+		//	background-image: linear-gradient(to left top, $beige, $black);
+	color: white;
+		.c1__header{
+			padding-top: 2em;
+			text-align: center;
+			 .c1__nav {
+				  a.c11 { // :o <3 <3
+						font-family: $logoFont;
+						text-decoration: none;
+						color: white;
+						font-size: 1.8em;
+						font-weight: 300;
+						//si je veux diminiuer l'espace entre les letres
+						//	letter-spacing: -1px;
+						float: left;
+						margin-top: -0.6em;
+						margin-left: -0.3em;
+						display: inline-block;
+				  }
+					ul {
+						list-style: none;
+						margin: 0 0 0 35%;
+						padding: 0;
+							li{
+								float: left;
+								margin-right: 1.5em;
+								a{
+									color: white;
+									text-decoration: none;
+									font-weight: 500;
+									padding: .4em 1em;
+									border-radius: 4em;
+									// <3 pour lui donner du temps avant d'aparaitre *__*
+									transition: background-color 0.4s ease-in-out;
+									&:hover{
+										cursor:pointer;
+										background-color: rgba($beige,0.3);
+
+									}
+								}
+							}
+					}
+			  }
+		}
+		.c1__into{
+			text-align: center;
+			margin-top: 6.5em;
+			h1 {
+				font-size: 2.8em;
+				font-family: $titelFont, sans-serif;
+				font-weight: 500;
+				text-shadow: -1px 1px 1px black;
+			}
+			p{
+				font-size: 1.1em;
+				//pour faire l'espace entre les lignes en haut et en bas
+				line-height: 1.8em;
+				// je donne la largeur du p
+				width: 800px;
+				/*pour que le p ne prends pas toute la largeur je vais lui donner une
+				largeur maximal*/
+				max-width: 75%;
+				//pour le centrer
+				margin: .8em auto;
+
+			}
+
+		}
+		.c1__slider{
+			margin-top: 7em;
+			position: relative;
+			.desktop {
+				background-color: white;
+				border-radius: 8px 8px 0 0;
+				position: relative;
+				z-index: 5;
+				overflow: hidden;
+				.desktop__bare{
+					background-color: white;
+					border-bottom: 2px solid gray;
+					border-radius: 8px 8px 0 0;
+					padding: 0.3em 0 0.3em 1.2em;
+					span{
+						display: inline-block;
+						//réalisation des cercle
+						height: 8px;
+						width: 8px;
+						border-radius: 8px;
+						margin-right: 4px;
+						&.red{
+							background-color: #ff5d50;
+						}
+						&.orange{
+							background-color: #f9be12;
+						}
+						&.green{
+							background-color: #08cb2f;
+						}
+					}
+
+
+				}
+			}
+			.desktop__content{
+				text-align: left;
+				overflow: hidden;
+				img{
+					display: inline-block;
+					margin-bottom: -4px;
+
+
+				}
+			}
+		}
+		.mobile{
+			background-color: white;
+			border-radius: 3em 3em 0 0;
+			width: 30%;
+			height:32em;
+			box-shadow: -2px -2px 40px rgba(0, 0, 0, 0.2);
+			max-width: 340px;
+			position: absolute;
+			right: 0;
+			top: -12%;
+			z-index: 10;
+			overflow: hidden;
+			.mobile__bare{
+				//haut 1.8 a droite 0 bas 1.2 gauche 0
+				padding: 1.8em 0 1.2em 0;
+				border-radius: 3em 3em 0 0;
+				background-color: white;
+				text-align: center;
+				.mob__micro{
+					display: inline-block;
+					background-color: gray;
+					height: 10px;
+					width: 10px;
+					border-radius: 10px;
+				}
+				.mob__speeker{
+					display: inline-block;
+					background-color: gray;
+					height: 10px;
+					width: 60px;
+					border-radius: 10px;
+				}
+			}
+			.mobile__content{
+				border: 1px solid gray;
+				border-bottom: none;
+				margin: 0 14px;
+				overflow: hidden;
+				border-radius: 4px 4px 0 0;
+				.mobCont__bare{
+					background-color: #f4f5f7;
+					color: #4e5a5f;
+					padding: 4px 0;
+					text-align: center;
+					.time {
+						font-weight: 700;
+						font-size: 0.8em;
+					}
+					.website{
+						font-size: 0.8em;
+
+					}
+					i{
+						font-size: 0.8em;
+					}
+				}
+
+			}
+			img{
+				display: inline-block;
+				width: 100%;
+				height: 30em;
+				max-width: 100%;
+				margin-bottom: -3px;
+
+			}
+		}
+
+}
+.footer{
+	padding: 0.8em 0;
+	.footer__column{
+		float: left;
+		width: 27%;
+
+		h3{
+			color: gray;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			margin-bottom: 1em;
+			em{
+				font-family: $logoFont;
+				font-size: 1.1em;
+				letter-spacing: 1px;
+				text-transform: none;
+
+			}
+		}
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li{
+				a{
+					color: #1F2428;
+					text-decoration: none;
+					display: inline-block;
+					margin-bottom: 1em;
+					font-size: 0.9em;
+					&.fb{
+						color: blue;
+						&:hover{
+							color: darken(blue, 20%);
+						}
+					}
+					&.g{
+						color: red;
+						&:hover{
+							color: darken(red, 20%);
+						}
+					}
+					&.t{
+						color: #0080FF;
+						&:hover{
+							color: darken(#0080FF,20%);
+						}
+
+					}
+					&.gi:hover{
+						color: lighten(#1F2428, 10%);
+					}
+				}
+			}
+		}
+	}
+	.footer__second{
+			border-bottom: 1px solid lighten(gray,30%);
+			padding: 3.8em 0;
+		ul{
+					list-style: none;
+					margin-top: 5em;
+					padding: 0;
+					li{
+						float: left;
+						margin-right: 1.8em;
+						margin-top: 5em;
+						font-size: 0.9em;
+						color: gray;
+
+						a{
+							text-decoration: none;
+						}
+					}
+
+		}
+
+
+
+	}
+}
